@@ -1,0 +1,50 @@
+/*--------- Hola ---------*/
+
+/*--- Theme ---*/
+
+:root {
+    --color-bg: rgb(94, 102, 92);
+    --color-text-1: rgb(20, 20, 20);
+    --color-text-2: rgba(20, 20, 20, 0.6);
+    --color-lines: rgb(74, 83, 72);
+    --color-underlines: rgb(50, 42, 38);
+}
+
+/*--- General ---*/
+
+body {
+    background: var(--color-bg);
+    color: var(--color-text-1); 
+    font-size: 18px;
+    font-family: sans-serif;
+}
+
+.content {
+    padding: 0;
+    margin: 0 auto;
+    width: 95%;
+    max-width: 450px;
+}
+
+.content h1 {
+    display: block;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 1em;
+    line-height: 1;
+    padding: 2rem 0;
+    margin: 0;
+    border-bottom: 1px solid var(--color-lines); 
+}
+
+.content a {
+    color: var(--color-text-1); 
+    text-decoration: none;
+    display: block;
+    padding: 1rem 0;
+    border-bottom: 1px solid var(--color-lines); 
+}
+
+.content a:hover {
+    color: var(--color-text-2); 
+}
