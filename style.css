@@ -3,12 +3,16 @@
 /*--- Theme ---*/
 
 :root {
-    --color-bg: rgb(94, 102, 92);
-    --color-text-1: rgb(20, 20, 20);
-    --color-text-2: rgba(20, 20, 20, 0.6);
-    --color-lines: rgb(74, 83, 72);
-    --color-underlines: rgb(50, 42, 38);
+    --color-bg: rgb(197, 210, 190);
+    --color-meta-1: rgba(0, 0, 0, 0.6);
+    --color-meta-2: rgba(0, 0, 0, 0.4);
+    --color-text-1: rgba(0, 0, 0, 0.6);
+    --color-text-2: rgba(0, 0, 0, 0.4);
+    --color-lines: rgb(170, 186, 162);
+    --border-radius: 0.8rem;
 }
+
+
 
 /*--- General ---*/
 
@@ -27,25 +31,93 @@ header,
     max-width: 450px;
 }
 
-.content h1 {
+
+
+/*--- Header ---*/
+
+header {
+    display: block;
+    padding: 2.5rem 0;
+    grid-template-columns: 1fr;
+    border-bottom: 1px solid var(--color-lines); 
+}
+
+header h1,
+header .back-btn {
+    text-transform: uppercase;
+    font-size: .8em;
+    letter-spacing: 0.08em;
+    line-height: 1;
+    font-weight: 700;
+    padding: 0;
+    margin: 0;
+}
+
+header h1 {
     display: block;
     text-align: center;
-    text-transform: uppercase;
-    font-size: 1em;
-    line-height: 1;
-    padding: 2rem 0;
-    margin: 0;
-    border-bottom: 1px solid var(--color-lines); 
+}
+
+header .back-btn {
+    position: absolute;
+    color: var(--color-text-2); 
+    text-decoration: none;
+}
+
+header .back-btn:hover {
+    color: var(--color-text-1);
+}
+
+
+
+/*--- Content ---*/
+
+.content {
+    padding-top: 3rem;
 }
 
 .content a {
-    color: var(--color-text-1); 
-    text-decoration: none;
     display: block;
-    padding: 1rem 0;
-    border-bottom: 1px solid var(--color-lines); 
+    padding: 1.4rem 0;
+    background: var(--color-meta-1); 
+    color: var(--color-bg); 
+    font-size: .8em;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    text-align: center;
+    border-radius: var(--border-radius);
 }
 
 .content a:hover {
-    color: var(--color-text-2); 
+    background: var(--color-meta-2); 
 }
+
+
+
+/*--- Pages ---*/
+
+/*- Alpha 600 -*/
+
+.alpha-600 input:is([type="button"], .alpha-600 [type="submit"], .alpha-600 [type="reset"]), .alpha-600 input[type="file"]::file-selector-button {
+    display: block;
+    background: var(--color-meta-1);
+    color: var(--color-bg); 
+    border: none;
+    cursor: pointer;
+    padding: 1rem 2rem;
+    border-radius: var(--border-radius); 
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
